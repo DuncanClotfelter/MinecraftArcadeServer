@@ -1,0 +1,35 @@
+main: minigame.Main
+name: MinigameManager
+version: 1.0
+author: Duncan Clotfelter
+api-version: 1.16
+description: Allows fast creation and provides easy configuration of minigames
+website: duncanclotfelter.wixsite.com/development
+prefix: Minigames
+depend: [WorldGuard]
+
+commands:
+    Killallgames:
+        description: Stops every currently running game
+        usage: "Usage: /<command> [test|stop]"
+        permission: Minigame.Admin
+    Quit:
+        description: Leave your current minigame
+        usage: "Usage: /quit"
+    Tokens:
+        description: Change/view a player's amount of tokens
+        usage: "Usage: /tokens [player] [Optional:[check/set/add/subtract] [amount]]"
+        permission: Minigame.Admin
+    Tickets:
+        description: Change/view a player's amount of tickets
+        usage: "Usage: /tokens [player] [Optional:[check/set/add/subtract] [amount]]"
+        permission: Minigame.Admin
+    Minigame:
+        description: Teleport to the specified minigame
+        usage: "Usage: /minigame [name]"
+  
+permissions:
+    Minigame.Admin:
+        description: Allows stopping/starting and player management of minigames.
+        default: op
+    
